@@ -1,0 +1,7 @@
+extends layout 
+block content 
+
+  h1 Livres :
+  ul
+    each val, index in books
+      li #{val.title} 

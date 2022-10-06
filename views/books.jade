@@ -1,0 +1,17 @@
+extends layout
+
+
+
+block content
+    if books == null || books.length == 0
+        h1 Aucun livre !
+    else
+        h1 Liste des livres :
+        div
+            each item, index in books  
+                ul 
+                    p #{item.title}
+                    a(href='/books/#{item._id}' )
+                        p voir les détails du livre
+    a(href='/')
+        p retour à l'accueil
